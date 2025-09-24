@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IB Tech Gadgets | Electronics & Phone Accessories in Ishaka, Uganda</title>
+    <meta name="description" content="Shop phone cases, chargers, earbuds, and smartwatches at IB Tech Gadgets in Ishaka. Quality tech solutions with fast delivery in Uganda.">
+    <meta name="keywords" content="IB Tech Gadgets, phone accessories Ishaka, electronics Ishaka, buy chargers Uganda, smartwatches Ishaka">
+    <!-- SEO Meta Tags -->
+    <link rel="canonical" href="https://ibtechgadgets.com">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-blue: #1E3A8A;
+            --white: #FFFFFF;
+            --accent-orange: #F97316;
+            --text-dark: #1F2937;
+            --text-light: #6B7280;
+            --border-light: #E5E7EB;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Navigation */
+        .navbar {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-blue);
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        .nav-links a {
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .nav-links a:hover {
+            background: var(--accent-orange);
+            color: var(--white);
+        }
+        .cart-icon {
+            position: relative;
+            font-size: 1.2rem;
+            color: var(--primary-blue);
+        }
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(30,58,138,0.8), rgba(30,58,138,0.8)), url('https://source.unsplash.com/random/1920x800/?tech-gadgets') center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 5rem 0;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .cta-btn {
+            background: var(--accent-orange);
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+        .cta-btn:hover {
+            transform: scale(1.05);
+        }
+        /* Sections */
+        .section {
+            padding: 4rem 0;
+        }
+        .section h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-blue);
+        }
+        /* Featured Products */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .product-card {
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .product-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .product-info {
+            padding: 1rem;
+        }
+        .product-price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--accent-orange);
+        }
+        .add-to-cart {
+            background: var(--primary-blue);
+            color: var(--white);
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 0.5rem;
+        }
+        /* Testimonials */
+        .testimonials {
+            background: var(--border-light);
+        }
+        .testimonial {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        /* About Summary */
+        .about-summary {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        /* Footer */
+        .footer {
+            background: var(--primary-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 0;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .social-icons a {
+            font-size: 1.5rem;
+            color: var(--white);
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: var(--accent-orange);
+        }
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Add mobile menu toggle if needed */
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+        /* Carousel - Simple CSS */
+        .carousel {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .carousel-inner {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .carousel-item {
+            min-width: 100%;
+            text-align: center;
+        }
+        /* Banner */
+        .banner {
+            background: var(--accent-orange);
+            color: var(--white);
+            text-align: center;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        .banner a {
+            color: var(--white);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">IB Tech Gadgets</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#cart"><i class="fas fa-shopping-cart cart-icon"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Discover Top-Quality Tech at IB Tech Gadgets</h1>
+            <p>Your one-stop shop for electronics and phone accessories in Ishaka, Uganda</p>
+            <a href="#shop" class="cta-btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Promotional Banner -->
+    <div class="banner">
+        <p>20% Off Phone Cases This Week! <a href="#shop">Shop Now</a></p>
+    </div>
+
+    <!-- Featured Products Carousel -->
+    <section class="section">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <img src="https://source.unsplash.com/random/400x300/?phone-case" alt="Phone Case - Premium Protection for Your Device" class="product-img">
+                        <h3>Silicone Phone Case</h3>
+                        <p class="product-price">UGX 15,000</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://source.unsplash.com/random/400x300/?power-bank" alt="Power Bank - 10,000mAh Fast Charging" class="product-img">
+                        <h3>Portable Power Bank</h3>
+                        <p class="product-price">UGX 45,000</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://source.unsplash.com/random/400x300/?wireless-earbuds" alt="Wireless Earbuds - Noise-Cancelling Bluetooth" class="product-img">
+                        <h3>True Wireless Earbuds</h3>
+                        <p class="product-price">UGX 80,000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid (Static for demo) -->
+    <section id="shop" class="section">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://source.unsplash.com/random/250x200/?charger" alt="Wired Charger - Fast Charging for Phones in Ishaka" class="product-img">
+                    <div class="product-info">
+                        <h3>Fast Wired Charger</h3>
+                        <p>High-speed charging cable for all devices. Compatible with iPhone and Android.</p>
+                        <p class="product-price">UGX 12,000</p>
+                        <p>In Stock</p>
+                        <button class="add-to-cart" onclick="addToCart('Fast Wired Charger')">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://source.unsplash.com/random/250x200/?screen-protector" alt="Screen Protector - Tempered Glass for Smartphones" class="product-img">
+                    <div class="product-info">
+                        <h3>Tempered Glass Screen Protector</h3>
+                        <p>Scratch-resistant protection for your phone screen. Easy installation.</p>
+                        <p class="product-price">UGX 8,000</p>
+                        <p>In Stock</p>
+                        <button class="add-to-cart" onclick="addToCart('Screen Protector')">Add to Cart</button>
+                    </div>
+                </div>
+                <!-- Add more products as needed -->
+                <div class="product-card">
+                    <img src="https://source.unsplash.com/random/250x200/?smartwatch" alt="Smartwatch - Fitness Tracker with Heart Rate Monitor" class="product-img">
+                    <div class="product-info">
+                        <h3>Smart Fitness Watch</h3>
+                        <p>Track your health and stay connected with this feature-packed smartwatch.</p>
+                        <p class="product-price">UGX 150,000</p>
+                        <p>Low Stock</p>
+                        <button class="add-to-cart" onclick="addToCart('Smartwatch')">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://source.unsplash.com/random/250x200/?earphones" alt="Bluetooth Headphones - Wireless Audio for Uganda" class="product-img">
+                    <div class="product-info">
+                        <h3>Over-Ear Bluetooth Headphones</h3>
+                        <p>Immerse yourself in sound with premium wireless headphones.</p>
+                        <p class="product-price">UGX 120,000</p>
+                        <p>In Stock</p>
+                        <button class="add-to-cart" onclick="addToCart('Headphones')">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://source.unsplash.com/random/250x200/?laptop-sleeve" alt="Laptop Sleeve - Protective Carry Case" class="product-img">
+                    <div class="product-info">
+                        <h3>15-inch Laptop Sleeve</h3>
+                        <p>Durable neoprene sleeve to protect your laptop on the go.</p>
+                        <p class="product-price">UGX 25,000</p>
+                        <p>In Stock</p>
+                        <button class="add-to-cart" onclick="addToCart('Laptop Sleeve')">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://source.unsplash.com/random/250x200/?gaming-headset" alt="Gaming Headset - Immersive Sound for Gamers" class="product-img">
+                    <div class="product-info">
+                        <h3>Pro Gaming Headset</h3>
+                        <p>High-fidelity audio and mic for ultimate gaming experience.</p>
+                        <p class="product-price">UGX 90,000</p>
+                        <p>In Stock</p>
+                        <button class="add-to-cart" onclick="addToCart('Gaming Headset')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Filters (Simple demo) -->
+            <div style="text-align: center; margin-top: 2rem;">
+                <select onchange="filterProducts(this.value)">
+                    <option value="">All Categories</option>
+                    <option value="phone">Phone Accessories</option>
+                    <option value="audio">Audio Devices</option>
+                    <option value="wearable">Wearable Tech</option>
+                    <option value="laptop">Laptop Accessories</option>
+                    <option value="gaming">Gaming</option>
+                </select>
+                <input type="text" placeholder="Search products..." onkeyup="searchProducts(this.value)">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial">
+                <p>"Great selection of phone accessories in Ishaka! Fast delivery too."</p>
+                <p><strong>- Sarah M.</strong></p>
+            </div>
+            <div class="testimonial">
+                <p>"The power bank I bought is amazing. Highly recommend IB Tech Gadgets."</p>
+                <p><strong>- John K.</strong></p>
+            </div>
+            <div class="testimonial">
+                <p>"Affordable smartwatches with excellent quality. Best in Uganda!"</p>
+                <p><strong>- Aisha N.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Summary -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About IB Tech Gadgets</h2>
+            <div class="about-summary">
+                <img src="https://source.unsplash.com/random/800x400/?store" alt="IB Tech Gadgets Store in Ishaka, Uganda" style="width:100%; height:300px; object-fit:cover; border-radius:10px; margin-bottom:2rem;">
+                <p>IB Tech Gadgets is a premier electronics and phone accessories retailer based in Ishaka, Uganda. Founded in 2020, we started with a passion for technology and a commitment to bringing affordable, high-quality gadgets to our local community. From phone cases and chargers to smartwatches and gaming headsets, we offer a wide range to enhance your digital life.</p>
+                <p>Our mission is to provide reliable tech solutions that keep you connected and entertained. We're dedicated to customer satisfaction, innovation, and supporting the Ishaka community. Visit us today at our store or shop online!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="section" style="background: var(--border-light);">
+        <div class="container">
+            <h2>Subscribe for Promotions</h2>
+            <form action="mailto:benisabirye66@gmail.com" method="post" enctype="text/plain" style="max-width:400px; margin:0 auto;">
+                <input type="email" placeholder="Enter your email" required style="width:100%; padding:0.5rem; margin-bottom:1rem; border-radius:5px; border:1px solid var(--border-light);">
+                <button type="submit" class="cta-btn" style="width:100%;">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem;">
+                <div>
+                    <h3>Get in Touch</h3>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+256778973259">0778 973 259</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:benisabirye66@gmail.com">benisabirye66@gmail.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Main Street, Ishaka, Bushenyi District, Uganda</p>
+                    <p><strong>Business Hours:</strong> Mon-Sat: 8 AM–6 PM, Sun: Closed</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/ibtechgadgets" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://instagram.com/ibtechgadgets" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/256778973259" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3>Send a Message</h3>
+                    <form action="mailto:benisabirye66@gmail.com" method="post" enctype="text/plain">
+                        <input type="text" placeholder="Your Name" required style="width:100%; padding:0.5rem; margin-bottom:1rem; border-radius:5px; border:1px solid var(--border-light);">
+                        <input type="email" placeholder="Your Email" required style="width:100%; padding:0.5rem; margin-bottom:1rem; border-radius:5px; border:1px solid var(--border-light);">
+                        <input type="tel" placeholder="Your Phone" style="width:100%; padding:0.5rem; margin-bottom:1rem; border-radius:5px; border:1px solid var(--border-light);">
+                        <textarea placeholder="Your Message" required rows="5" style="width:100%; padding:0.5rem; margin-bottom:1rem; border-radius:5px; border:1px solid var(--border-light);"></textarea>
+                        <button type="submit" class="cta-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <!-- Google Maps -->
+            <div style="margin-top:2rem;">
+                <iframe src="https://www.google.com/maps/embed/v1/view?key=AIzaSyB2doXUPHMUATASGseTSGPuu1F22_6Wpc0&center=-0.5430556,30.1369444&zoom=13&maptype=satellite" width="100%" height="400" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <!-- FAQ -->
+            <div style="margin-top:3rem;">
+                <h3>FAQ</h3>
+                <details>
+                    <summary>Returns Policy</summary>
+                    <p>30-day returns on unused items. Contact us via email or phone.</p>
+                </details>
+                <details>
+                    <summary>Warranty</summary>
+                    <p>All products come with manufacturer warranty. Inquire for details.</p>
+                </details>
+                <details>
+                    <summary>Delivery Options</summary>
+                    <p>Local delivery in Ishaka free over UGX 50,000. Uganda-wide shipping available.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 IB Tech Gadgets. All rights reserved. | Ishaka, Uganda | <a href="tel:+256778973259">0778 973 259</a> | <a href="mailto:benisabirye66@gmail.com">benisabirye66@gmail.com</a></p>
+            <div class="social-icons">
+                <a href="https://facebook.com/ibtechgadgets" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://instagram.com/ibtechgadgets" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/256778973259" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple Cart Functionality
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        function addToCart(productName) {
+            cart.push({name: productName, price: 10000}); // Placeholder price
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${productName} added to cart!`);
+        }
+
+        // Filter Products (Simple demo)
+        function filterProducts(category) {
+            // Implement filtering logic here
+            console.log('Filtering by:', category);
+        }
+
+        // Search Products
+        function searchProducts(query) {
+            // Implement search logic
+            console.log('Searching for:', query);
+        }
+
+        // Newsletter Popup (Simple alert for demo)
+        // Add pop-up logic if needed
+
+        // WhatsApp Chat Integration
+        // Already linked in social icons
+    </script>
+</body>
+</html>
